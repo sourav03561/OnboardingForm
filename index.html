@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Microrbit 2025 Onboarding</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <img src="microrbit_logo.png" alt="Microrbit Logo" class="logo">
+  <h1>Microrbit 2025 Onboarding Form</h1>
+  <form id="onboardingForm">
+    <h2>Personal Information</h2>
+    <input type="text" id="firstName" placeholder="First Name(s)" required>
+    <input type="text" id="lastName" placeholder="Last Name" required>
+    <input type="email" id="email" placeholder="Personal Email Address" required>
+    <input type="tel" id="phone" placeholder="Phone Number" required>
+    <input type="text" id="address" placeholder="Address" required>
+    <input type="text" id="country" placeholder="Country" required>
+    <textarea id="biography" placeholder="Biography..." required></textarea>
+
+    <h2>Professional Information (Optional)</h2>
+    <input type="text" id="organization" placeholder="Organization Name">
+    <input type="url" id="website" placeholder="Business Website">
+    <input type="url" id="linkedin" placeholder="LinkedIn URL">
+    <input type="url" id="twitter" placeholder="Twitter URL">
+    <input type="url" id="facebook" placeholder="Facebook URL">
+    <input type="url" id="instagram" placeholder="Instagram URL">
+    <input type="url" id="youtube" placeholder="Video Links / YouTube Channel">
+
+    <h2>Participation Type</h2>
+    <div class="checkbox-group">
+      <label><input type="checkbox" name="participation" value="Exhibitor"> Exhibitor</label>
+      <label><input type="checkbox" name="participation" value="Investor"> Investor</label>
+      <label><input type="checkbox" name="participation" value="Speaker"> Speaker</label>
+      <label><input type="checkbox" name="participation" value="Poster Presenter"> Poster Presenter</label>
+      <label><input type="checkbox" name="participation" value="Attendee"> Attendee</label>
+      <label><input type="checkbox" name="participation" value="Other"> Other</label>
+    </div>
+
+    <div id="talkSection" style="display:none;">
+      <h2>Talk Information</h2>
+      <input type="text" id="talkTitle" placeholder="Talk Title">
+      <textarea id="abstract" placeholder="Abstract"></textarea>
+    </div>
+
+    <label><input type="checkbox" id="confirm" required> I confirm all information is correct.</label>
+
+    <button type="submit">Submit</button>
+  </form>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
